@@ -2,6 +2,8 @@
 
 CStream::CStream(VOID)
 {
+	m_pucBuf	= NULL;
+	m_dwLen		= 0;
 }
 
 CStream::~CStream(VOID)
@@ -10,135 +12,246 @@ CStream::~CStream(VOID)
 
 BOOL CStream::SetBuffer(BYTE* pucBuf)
 {
-	return 0;
+	if (!pucBuf)
+	{
+		return FALSE;
+	}
+
+	m_pucBuf	= pucBuf;
+	m_dwLen		= 0;
+
+	return TRUE;
 }
 
 BOOL CStream::SetBuffer()
 {
-	return 0;
+	if (!m_pucBuf)
+	{
+		return FALSE;
+	}
+
+	m_dwLen		= 0;
+
+	return TRUE;
 }
 
 BOOL CStream::ReadInt32(INT* piData)
 {
-	return 0;
+	memcpy(piData, m_pucBuf + m_dwLen, sizeof(INT));
+	
+	m_dwLen += sizeof(INT);
+
+	return TRUE;
 }
 
 BOOL CStream::ReadDWORD(DWORD* pdwData)
 {
-	return 0;
+	memcpy(pdwData, m_pucBuf + m_dwLen, sizeof(DWORD));
+
+	m_dwLen += sizeof(DWORD);
+
+	return TRUE;
 }
 
 BOOL CStream::ReadDWORD_PTR(DWORD_PTR* pdwData)
 {
-	return 0;
+	memcpy(pdwData, m_pucBuf + m_dwLen, sizeof(DWORD_PTR));
+
+	m_dwLen += sizeof(DWORD_PTR);
+
+	return TRUE;
 }
 
 BOOL CStream::ReadByte(BYTE* pucData)
 {
-	return 0;
+	memcpy(pucData, m_pucBuf + m_dwLen, sizeof(BYTE));
+
+	m_dwLen += sizeof(BYTE);
+
+	return TRUE;
 }
 
-BOOL CStream::ReadBytes(BYTE* pucData, DWORD dwLen)
+BOOL CStream::ReadBytes(BYTE* pucData, DWORD length)
 {
-	return 0;
+	memcpy(pucData, m_pucBuf + m_dwLen, sizeof(length));
+
+	m_dwLen += length;
+
+	return TRUE;
 }
 
 BOOL CStream::ReadFloat(FLOAT* pfData)
 {
-	return 0;
+	memcpy(pfData, m_pucBuf + m_dwLen, sizeof(FLOAT));
+
+	m_dwLen += sizeof(FLOAT);
+
+	return TRUE;
 }
 
 BOOL CStream::ReadInt64(INT64* pi64Data)
 {
-	return 0;
+	memcpy(pi64Data, m_pucBuf + m_dwLen, sizeof(INT64));
+
+	m_dwLen += sizeof(INT64);
+
+	return TRUE;
 }
 
 BOOL CStream::ReadUSHORT(USHORT* pusData)
 {
-	return 0;
+	memcpy(pusData, m_pucBuf + m_dwLen, sizeof(USHORT));
+
+	m_dwLen += sizeof(USHORT);
+
+	return TRUE;
 }
 
 BOOL CStream::ReadSHORT(SHORT* psData)
 {
-	return 0;
+	memcpy(psData, m_pucBuf + m_dwLen, sizeof(SHORT));
+
+	m_dwLen += sizeof(SHORT);
+
+	return TRUE;
 }
 
 BOOL CStream::ReadBOOL(BOOL* pbData)
 {
-	return 0;
+	memcpy(pbData, m_pucBuf + m_dwLen, sizeof(BOOL));
+
+	m_dwLen += sizeof(BOOL);
+
+	return TRUE;
 }
 
 BOOL CStream::ReadWCHAR(WCHAR* pwcData)
 {
-	return 0;
+	memcpy(pwcData, m_pucBuf + m_dwLen, sizeof(WCHAR));
+
+	m_dwLen += sizeof(WCHAR);
+
+	return TRUE;
 }
 
 BOOL CStream::ReadWCHARs(LPWSTR lpwData, DWORD dwLen)
 {
-	return 0;
+	memcpy(lpwData, m_pucBuf + m_dwLen, dwLen * sizeof(WCHAR));
+
+	m_dwLen += dwLen * sizeof(WCHAR);
+
+	return TRUE;
 }
 
 BOOL CStream::WriteInt32(INT iData)
 {
-	return 0;
+	memcpy(m_pucBuf + m_dwLen, &iData, sizeof(INT));
+
+	m_dwLen += sizeof(INT);
+
+	return TRUE;
 }
 
 BOOL CStream::WriteDWORD(DWORD dwData)
 {
-	return 0;
+	memcpy(m_pucBuf + m_dwLen, &dwData, sizeof(DWORD));
+
+	m_dwLen += sizeof(DWORD);
+
+	return TRUE;
 }
 
 BOOL CStream::WriteDWORD_PTR(DWORD_PTR dwData)
 {
-	return 0;
+	memcpy(m_pucBuf + m_dwLen, &dwData, sizeof(DWORD_PTR));
+
+	m_dwLen += sizeof(DWORD_PTR);
+
+	return TRUE;
 }
 
 BOOL CStream::WriteByte(BYTE ucData)
 {
-	return 0;
+	memcpy(m_pucBuf + m_dwLen, &ucData, sizeof(BYTE));
+
+	m_dwLen += sizeof(BYTE);
+
+	return TRUE;
 }
 
 BOOL CStream::WriteBytes(BYTE* pucData, DWORD dwLen)
 {
-	return 0;
+	memcpy(m_pucBuf + m_dwLen, pucData, dwLen);
+
+	m_dwLen += dwLen;
+
+	return TRUE;
 }
 
 BOOL CStream::WriteFloat(FLOAT fData)
 {
-	return 0;
+	memcpy(m_pucBuf + m_dwLen, &fData, sizeof(FLOAT));
+
+	m_dwLen += sizeof(FLOAT);
+
+	return TRUE;
 }
 
 BOOL CStream::WriteInt64(INT64 i64Data)
 {
-	return 0;
+	memcpy(m_pucBuf + m_dwLen, &i64Data, sizeof(INT64));
+
+	m_dwLen += sizeof(INT64);
+
+	return TRUE;
 }
 
 BOOL CStream::WriteUSHORT(USHORT usData)
 {
-	return 0;
+	memcpy(m_pucBuf + m_dwLen, &usData, sizeof(USHORT));
+
+	m_dwLen += sizeof(USHORT);
+
+	return TRUE;
 }
 
 BOOL CStream::WriteSHORT(SHORT sData)
 {
-	return 0;
+	memcpy(m_pucBuf + m_dwLen, &sData, sizeof(SHORT));
+
+	m_dwLen += sizeof(SHORT);
+
+	return TRUE;
 }
 
 BOOL CStream::WriteBOOL(BOOL bData)
 {
-	return 0;
+	memcpy(m_pucBuf + m_dwLen, &bData, sizeof(BOOL));
+
+	m_dwLen += sizeof(BOOL);
+
+	return TRUE;
 }
 
 BOOL CStream::WriteWCHAR(WCHAR wcData)
 {
-	return 0;
+	memcpy(m_pucBuf + m_dwLen, &wcData, sizeof(WCHAR));
+
+	m_dwLen += sizeof(WCHAR);
+
+	return TRUE;
 }
 
 BOOL CStream::WriteWCHARs(LPCWSTR lpcwData, DWORD dwLen)
 {
-	return 0;
+	memcpy(m_pucBuf + m_dwLen, lpcwData, dwLen * sizeof(WCHAR));
+
+	m_dwLen += dwLen * sizeof(WCHAR);
+
+	return TRUE;
 }
 
 DWORD CStream::GetLength(VOID)
 {
-	return 0;
+	return m_dwLen;
 }
