@@ -10,6 +10,8 @@
 #include <dbghelp.h>
 #include <assert.h>
 
+#define _CRT_SECURE_NO_WARNINGS
+
 #define MAX_BUF_LEN	1024
 #define MAX_BUF_LEN_EXTRA MAX_BUF_LEN * 4
 
@@ -38,13 +40,13 @@ public:
 		if (!GetFullPathName(wszExeFullPathName, MAX_PATH, wszExeFolderName, &lpwExeFileName))
 			return;
 
-		wcsncpy(wszExeFileName, lpwExeFileName, wcslen(lpwExeFileName) - 4);
+		wcsncpy_s(wszExeFileName, lpwExeFileName, wcslen(lpwExeFileName) - 4);
 
 		DWORD dwComputerNameLen = MAX_PATH;
 		if (!GetComputerName(m_wszComputerName, &dwComputerNameLen))
 			return;
 
-		_snwprintf(m_wszLogFolderName, MAX_PATH, L"C:\\Log\\FTO\\%s", wszExeFileName);
+		_snwprintf_s(m_wszLogFolderName, MAX_PATH, L"C:\\Log\\FTO\\%s", wszExeFileName);
 		if (SHCreateDirectoryEx(NULL, m_wszLogFolderName, NULL) != ERROR_SUCCESS)
 			return;
 	}

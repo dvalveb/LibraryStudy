@@ -62,7 +62,7 @@ BOOL CRegistry::SetValue(LPWSTR lpwValueName, DWORD dwValue)
 		return FALSE;
 
 	WCHAR wszValue[16] = { 0, };
-	_itow(dwValue, wszValue, 10);
+	_itow_s(dwValue, wszValue, 10);
 
 	if (RegSetValueEx(m_hRootKey, lpwValueName, 0, REG_DWORD, (BYTE*)&dwValue, sizeof(DWORD)) != ERROR_SUCCESS)
 		return FALSE;
