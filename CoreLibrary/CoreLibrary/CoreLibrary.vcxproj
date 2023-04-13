@@ -76,6 +76,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -132,11 +133,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="base\study_defs.h" />
     <ClInclude Include="Math\MathLibrary.h" />
+    <ClInclude Include="registry\registry.h" />
     <ClInclude Include="Stream\Stream.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Math\MathLibrary.cpp" />
+    <ClCompile Include="registry\registry.cpp" />
     <ClCompile Include="Stream\Stream.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

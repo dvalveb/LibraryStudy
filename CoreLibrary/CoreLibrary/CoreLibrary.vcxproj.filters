@@ -13,21 +13,42 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{f04f39b1-a7af-4c7f-9f38-63b2f1f4ed0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Stream">
+      <UniqueIdentifier>{2313a4f4-8a12-4925-ba7f-3a77a0ddc300}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base">
+      <UniqueIdentifier>{b7b94344-7b14-4e15-ba7e-a3df45d60a0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="registry">
+      <UniqueIdentifier>{81b77635-9198-40cb-a7e6-29f2888d6988}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Math\MathLibrary.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>Math</Filter>
     </ClInclude>
     <ClInclude Include="Stream\Stream.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>Stream</Filter>
+    </ClInclude>
+    <ClInclude Include="base\study_defs.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="registry\registry.h">
+      <Filter>registry</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Math\MathLibrary.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>Math</Filter>
     </ClCompile>
     <ClCompile Include="Stream\Stream.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>Stream</Filter>
+    </ClCompile>
+    <ClCompile Include="registry\registry.cpp">
+      <Filter>registry</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

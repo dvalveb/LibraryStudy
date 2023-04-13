@@ -1,4 +1,7 @@
 ﻿#pragma once
+
+#include "../base/study_defs.h"
+
 namespace MathLbrary
 {
 	//
