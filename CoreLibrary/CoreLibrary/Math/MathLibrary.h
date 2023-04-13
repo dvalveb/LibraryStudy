@@ -1,6 +1,7 @@
 ﻿#pragma once
 namespace MathLbrary
 {
+	//
 	class ArithMatic
 	{
 	public:
