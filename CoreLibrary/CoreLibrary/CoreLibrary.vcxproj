@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -134,11 +134,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="base\study_defs.h" />
+    <ClInclude Include="iniFile\iniFile.h" />
     <ClInclude Include="Math\MathLibrary.h" />
     <ClInclude Include="registry\registry.h" />
     <ClInclude Include="Stream\Stream.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="iniFile\iniFile.cpp" />
     <ClCompile Include="Math\MathLibrary.cpp" />
     <ClCompile Include="registry\registry.cpp" />
     <ClCompile Include="Stream\Stream.cpp" />

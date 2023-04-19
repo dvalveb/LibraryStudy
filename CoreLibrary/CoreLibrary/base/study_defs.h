@@ -9,7 +9,7 @@
 #include <shlobj.h>
 #include <dbghelp.h>
 #include <assert.h>
-
+#include <iostream>
 
 
 #define _CRT_SECURE_NO_WARNINGS
