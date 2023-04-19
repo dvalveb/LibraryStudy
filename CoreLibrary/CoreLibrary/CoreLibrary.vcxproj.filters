@@ -28,6 +28,15 @@
     <Filter Include="service">
       <UniqueIdentifier>{8572c085-7832-407e-81b7-d3ec74c227bf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="random">
+      <UniqueIdentifier>{e5324c68-915c-456f-bd26-5223f9dc303d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="profile">
+      <UniqueIdentifier>{a25c4713-c442-4105-bf68-e77980ae2150}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="log">
+      <UniqueIdentifier>{61d18ce5-93d4-4979-9655-342271c3e471}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Math\MathLibrary.h">
@@ -48,6 +57,15 @@
     <ClInclude Include="service\service.h">
       <Filter>service</Filter>
     </ClInclude>
+    <ClInclude Include="random\random.h">
+      <Filter>random</Filter>
+    </ClInclude>
+    <ClInclude Include="profile\profile.h">
+      <Filter>profile</Filter>
+    </ClInclude>
+    <ClInclude Include="log\log.h">
+      <Filter>log</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Math\MathLibrary.cpp">
@@ -64,6 +82,12 @@
     </ClCompile>
     <ClCompile Include="service\service.cpp">
       <Filter>service</Filter>
+    </ClCompile>
+    <ClCompile Include="random\random.cpp">
+      <Filter>random</Filter>
+    </ClCompile>
+    <ClCompile Include="profile\profile.cpp">
+      <Filter>profile</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

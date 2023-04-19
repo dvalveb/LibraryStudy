@@ -135,7 +135,10 @@
   <ItemGroup>
     <ClInclude Include="base\study_defs.h" />
     <ClInclude Include="iniFile\iniFile.h" />
+    <ClInclude Include="log\log.h" />
     <ClInclude Include="Math\MathLibrary.h" />
+    <ClInclude Include="profile\profile.h" />
+    <ClInclude Include="random\random.h" />
     <ClInclude Include="registry\registry.h" />
     <ClInclude Include="service\service.h" />
     <ClInclude Include="Stream\Stream.h" />
@@ -143,6 +146,8 @@
   <ItemGroup>
     <ClCompile Include="iniFile\iniFile.cpp" />
     <ClCompile Include="Math\MathLibrary.cpp" />
+    <ClCompile Include="profile\profile.cpp" />
+    <ClCompile Include="random\random.cpp" />
     <ClCompile Include="registry\registry.cpp" />
     <ClCompile Include="service\service.cpp" />
     <ClCompile Include="Stream\Stream.cpp" />

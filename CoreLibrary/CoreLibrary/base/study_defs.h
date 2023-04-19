@@ -17,6 +17,11 @@
 #define MAX_BUF_LEN	1024
 #define MAX_BUF_LEN_EXTRA MAX_BUF_LEN * 4
 
+#define MAX_PROFILE_SAMPLES		50
+
+#define MAX_LOG_LENGTH 1024
+#define SERVER_LOG_FOLDER L"D:\workspacs\Study\LibraryStudy\CoreLibrary\%s"
+
 #define LOGFOLDER_NAME g_oUtilMisc._GetLogFolderName()
 #define COMPUTER_NAME g_oUtilMisc._GetComputerName()
 
