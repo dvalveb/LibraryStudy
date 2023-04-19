@@ -137,12 +137,14 @@
     <ClInclude Include="iniFile\iniFile.h" />
     <ClInclude Include="Math\MathLibrary.h" />
     <ClInclude Include="registry\registry.h" />
+    <ClInclude Include="service\service.h" />
     <ClInclude Include="Stream\Stream.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="iniFile\iniFile.cpp" />
     <ClCompile Include="Math\MathLibrary.cpp" />
     <ClCompile Include="registry\registry.cpp" />
+    <ClCompile Include="service\service.cpp" />
     <ClCompile Include="Stream\Stream.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

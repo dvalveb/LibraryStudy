@@ -25,6 +25,9 @@
     <Filter Include="registry">
       <UniqueIdentifier>{81b77635-9198-40cb-a7e6-29f2888d6988}</UniqueIdentifier>
     </Filter>
+    <Filter Include="service">
+      <UniqueIdentifier>{8572c085-7832-407e-81b7-d3ec74c227bf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Math\MathLibrary.h">
@@ -39,6 +42,12 @@
     <ClInclude Include="registry\registry.h">
       <Filter>registry</Filter>
     </ClInclude>
+    <ClInclude Include="iniFile\iniFile.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="service\service.h">
+      <Filter>service</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Math\MathLibrary.cpp">
@@ -49,6 +58,12 @@
     </ClCompile>
     <ClCompile Include="registry\registry.cpp">
       <Filter>registry</Filter>
+    </ClCompile>
+    <ClCompile Include="iniFile\iniFile.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="service\service.cpp">
+      <Filter>service</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
