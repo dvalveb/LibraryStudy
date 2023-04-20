@@ -8,6 +8,21 @@ CIniFile::~CIniFile(VOID)
 {
 }
 
+BOOL CIniFile::Open(LPCTSTR fileName)
+{
+	if (!fileName)
+		return FALSE;
+
+	_tcsncpy(mFileName, fileName, MAX_PATH);
+
+	return TRUE;
+}
+
+BOOL CIniFile::Close(VOID)
+{
+	return 0;
+}
+
 BOOL CIniFile::SetValue(LPCWSTR lpcwFileName, LPCWSTR lpcwAppName, LPCWSTR lpcwKeyName, LPCWSTR lpcwValue)
 {
 	return 0;

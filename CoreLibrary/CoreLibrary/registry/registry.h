@@ -23,5 +23,6 @@ public:
 	BOOL DeleteValue(LPWSTR lpwValueName);
 	
 private:
-	HKEY m_hRootKey;
+	HKEY	m_hRootKey;
+	BOOL	mIsOpened;
 };

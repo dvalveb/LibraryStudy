@@ -9,9 +9,13 @@ public:
 	virtual ~CIniFile(VOID);
 
 private:
-	
+	TCHAR	mFileName[MAX_PATH];
 
 public:
+	BOOL	Open(LPCTSTR fileName);
+	BOOL	Close(VOID);
+
+
 	static BOOL SetValue(LPCWSTR lpcwFileName, LPCWSTR lpcwAppName, LPCWSTR lpcwKeyName, LPCWSTR lpcwValue);
 	static BOOL SetValue(LPCWSTR lpcwFileName, LPCWSTR lpcwAppName, LPCWSTR lpcwKeyName, DWORD dwValue);
 	static BOOL SetValue(LPCWSTR lpcwFileName, LPCWSTR lpcwAppName, LPCWSTR lpcwKeyName, FLOAT fValue);

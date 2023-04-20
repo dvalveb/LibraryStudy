@@ -134,9 +134,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="base\study_defs.h" />
+    <ClInclude Include="circularQueue\circularQueue.h" />
+    <ClInclude Include="criticalSection\criticalSection.h" />
+    <ClInclude Include="crypt\crtpt.h" />
     <ClInclude Include="iniFile\iniFile.h" />
+    <ClInclude Include="iocp\iocp.h" />
     <ClInclude Include="log\log.h" />
     <ClInclude Include="Math\MathLibrary.h" />
+    <ClInclude Include="multiThreadSync\multiThreadSync.h" />
+    <ClInclude Include="networkSession\networkSession.h" />
+    <ClInclude Include="packetSession\packetSession.h" />
     <ClInclude Include="profile\profile.h" />
     <ClInclude Include="random\random.h" />
     <ClInclude Include="registry\registry.h" />
@@ -144,8 +151,13 @@
     <ClInclude Include="Stream\Stream.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="circularQueue\circularQueue.cpp" />
+    <ClCompile Include="crypt\crtpt.cpp" />
     <ClCompile Include="iniFile\iniFile.cpp" />
+    <ClCompile Include="iocp\iocp.cpp" />
     <ClCompile Include="Math\MathLibrary.cpp" />
+    <ClCompile Include="networkSession\networkSession.cpp" />
+    <ClCompile Include="packetSession\packetSession.cpp" />
     <ClCompile Include="profile\profile.cpp" />
     <ClCompile Include="random\random.cpp" />
     <ClCompile Include="registry\registry.cpp" />

@@ -37,6 +37,27 @@
     <Filter Include="log">
       <UniqueIdentifier>{61d18ce5-93d4-4979-9655-342271c3e471}</UniqueIdentifier>
     </Filter>
+    <Filter Include="iocp">
+      <UniqueIdentifier>{b8c30155-5102-492c-8275-20ca62099804}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="packetSession">
+      <UniqueIdentifier>{a4d1bbd4-36b5-4b0e-8084-2c2cf31e698b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="networkSession">
+      <UniqueIdentifier>{175df4fe-6d10-4497-9c72-222ffedfe8cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mulityThreadSync">
+      <UniqueIdentifier>{978e4de1-4c2a-4626-9ca6-f8fc09df1e58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="criticalSection">
+      <UniqueIdentifier>{a5533186-3c80-43bc-b104-42969fac906e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="circularQueue">
+      <UniqueIdentifier>{5958e714-fac4-4525-96e4-79cba3629945}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="crypt">
+      <UniqueIdentifier>{20baf0ed-ad89-48bc-8dce-bc30af02b486}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Math\MathLibrary.h">
@@ -66,6 +87,27 @@
     <ClInclude Include="log\log.h">
       <Filter>log</Filter>
     </ClInclude>
+    <ClInclude Include="iocp\iocp.h">
+      <Filter>iocp</Filter>
+    </ClInclude>
+    <ClInclude Include="packetSession\packetSession.h">
+      <Filter>packetSession</Filter>
+    </ClInclude>
+    <ClInclude Include="networkSession\networkSession.h">
+      <Filter>networkSession</Filter>
+    </ClInclude>
+    <ClInclude Include="multiThreadSync\multiThreadSync.h">
+      <Filter>mulityThreadSync</Filter>
+    </ClInclude>
+    <ClInclude Include="criticalSection\criticalSection.h">
+      <Filter>criticalSection</Filter>
+    </ClInclude>
+    <ClInclude Include="circularQueue\circularQueue.h">
+      <Filter>circularQueue</Filter>
+    </ClInclude>
+    <ClInclude Include="crypt\crtpt.h">
+      <Filter>crypt</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Math\MathLibrary.cpp">
@@ -88,6 +130,21 @@
     </ClCompile>
     <ClCompile Include="profile\profile.cpp">
       <Filter>profile</Filter>
+    </ClCompile>
+    <ClCompile Include="iocp\iocp.cpp">
+      <Filter>iocp</Filter>
+    </ClCompile>
+    <ClCompile Include="packetSession\packetSession.cpp">
+      <Filter>packetSession</Filter>
+    </ClCompile>
+    <ClCompile Include="networkSession\networkSession.cpp">
+      <Filter>networkSession</Filter>
+    </ClCompile>
+    <ClCompile Include="circularQueue\circularQueue.cpp">
+      <Filter>circularQueue</Filter>
+    </ClCompile>
+    <ClCompile Include="crypt\crtpt.cpp">
+      <Filter>crypt</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

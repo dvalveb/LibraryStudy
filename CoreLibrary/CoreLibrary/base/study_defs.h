@@ -1,5 +1,11 @@
 ﻿#pragma once
 
+#pragma comment(lib,"Ws2_32.lib")
+
+#include <winsock2.h>
+#include <ws2tcpip.h>
+#include <mswsock.h>
+
 #include <windows.h>
 #include <iostream>
 #include <stdio.h>
@@ -10,12 +16,28 @@
 #include <dbghelp.h>
 #include <assert.h>
 #include <iostream>
+#include <vector>
+#include <list>
+#include < tchar.h >
+#include <process.h>
+//#include <WinSock2.h>
+//
+//#pragma comment(lib, "ws2_32.lib")
+
+
 
 
 #define _CRT_SECURE_NO_WARNINGS
 
 #define MAX_BUF_LEN	1024
 #define MAX_BUF_LEN_EXTRA MAX_BUF_LEN * 4
+#define MAX_BUFFER_LENGTH	4096
+
+#ifdef _SERVER_SIDE
+#define MAX_QUEUE_LENGTH	50
+#else
+#define MAX_QUEUE_LENGTH	500
+#endif
 
 #define MAX_PROFILE_SAMPLES		50
 
@@ -27,6 +49,22 @@
 
 #define M2W(lpSrc, lpwDest, dwBufLen) g_oUtilMisc._M2W(lpSrc, lpwDest, dwBufLen)
 #define W2M(lpwSrc, lpDest, dwBufLen) g_oUtilMisc._W2M(lpwSrc, lpDest, dwBufLen)
+
+enum IO_TYPE
+{
+	IO_ACCEPT,
+	IO_READ,
+	IO_WRITE
+};
+
+
+typedef struct _OVERLAPPED_EX
+{
+	OVERLAPPED	Overlapped;
+	IO_TYPE		IoType;
+	VOID* Object;
+} OVERLAPPED_EX;
+
 
 class CUtilMisc
 {
@@ -79,3 +117,4 @@ private:
 };
 
 static CUtilMisc g_oUtilMisc;
+
