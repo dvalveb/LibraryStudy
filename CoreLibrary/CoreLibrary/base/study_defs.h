@@ -20,6 +20,8 @@
 #include <list>
 #include < tchar.h >
 #include <process.h>
+#include <map>
+
 //#include <WinSock2.h>
 //
 //#pragma comment(lib, "ws2_32.lib")
