@@ -5,10 +5,15 @@
 #define MAX_USER 100
 #define DEFAULT_PORT 1820
 
+
+
+#include <map>
+
 #include "../../../../LibraryStudy/CoreLibrary/CoreLibrary/base/study_defs.h"
 #include "../../../../LibraryStudy/CoreLibrary/CoreLibrary/iocp/iocp.h"
 #include "../../../../LibraryStudy/CoreLibrary/CoreLibrary/networkSession/networkSession.h"
 #include "../../../../LibraryStudy/CoreLibrary/CoreLibrary/clientSession/clientSession.h"
+#include "../../../../LibraryStudy/CoreLibrary/CoreLibrary/packetSession/packetSession.h"
 
 
 typedef struct _USER
@@ -36,4 +41,7 @@ typedef struct _PROGRAM
 	WCHAR szComment[32];
 } PROGRAM;
 
+#include "connected_session.h"
+#include "connected_session_manager.h"
 #include "protocol.h"
+#include "server_iocp.h"

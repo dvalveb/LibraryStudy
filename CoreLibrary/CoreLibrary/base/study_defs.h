@@ -46,8 +46,8 @@
 #define MAX_LOG_LENGTH 1024
 #define SERVER_LOG_FOLDER L"D:\workspacs\Study\LibraryStudy\CoreLibrary\%s"
 
-#define LOGFOLDER_NAME g_oUtilMisc._GetLogFolderName()
-#define COMPUTER_NAME g_oUtilMisc._GetComputerName()
+//#define LOGFOLDER_NAME g_oUtilMisc._GetLogFolderName()
+//#define COMPUTER_NAME g_oUtilMisc._GetComputerName()
 
 #define M2W(lpSrc, lpwDest, dwBufLen) g_oUtilMisc._M2W(lpSrc, lpwDest, dwBufLen)
 #define W2M(lpwSrc, lpDest, dwBufLen) g_oUtilMisc._W2M(lpwSrc, lpDest, dwBufLen)
