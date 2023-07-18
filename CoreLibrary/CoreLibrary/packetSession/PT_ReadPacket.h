@@ -1,8 +1,10 @@
 #pragma once
 
+#include "../../../CoreLibrary/CoreLibrary/Stream/Stream.h"
+
 inline VOID READ_PT_REG_USER(BYTE *buffer, S_PT_REG_USER &parameter)
 {
-	CStreamSP Stream;
+	CstreamSP Stream;
 	Stream->SetBuffer(buffer);
 
 	Stream->ReadWCHARs(parameter.USER_ID, 32);
@@ -14,7 +16,7 @@ inline VOID READ_PT_REG_USER(BYTE *buffer, S_PT_REG_USER &parameter)
 
 inline VOID READ_PT_QUERY_USER(BYTE *buffer, S_PT_QUERY_USER &parameter)
 {
-	CStreamSP Stream;
+	CstreamSP Stream;
 	Stream->SetBuffer(buffer);
 
 	Stream->ReadWCHARs(parameter.USER_ID, 32);
@@ -22,7 +24,7 @@ inline VOID READ_PT_QUERY_USER(BYTE *buffer, S_PT_QUERY_USER &parameter)
 
 inline VOID READ_PT_QUERY_USER_RESULT(BYTE *buffer, S_PT_QUERY_USER_RESULT &parameter)
 {
-	CStreamSP Stream;
+	CstreamSP Stream;
 	Stream->SetBuffer(buffer);
 
 	Stream->ReadWCHARs(parameter.USER_ID, 32);
@@ -34,7 +36,7 @@ inline VOID READ_PT_QUERY_USER_RESULT(BYTE *buffer, S_PT_QUERY_USER_RESULT &para
 
 inline VOID READ_PT_REG_COMPUTER(BYTE *buffer, S_PT_REG_COMPUTER &parameter)
 {
-	CStreamSP Stream;
+	CstreamSP Stream;
 	Stream->SetBuffer(buffer);
 
 	Stream->ReadWCHARs(parameter.COMPUTER_NAME, 32);
@@ -46,7 +48,7 @@ inline VOID READ_PT_REG_COMPUTER(BYTE *buffer, S_PT_REG_COMPUTER &parameter)
 
 inline VOID READ_PT_QUERY_COMPUTER(BYTE *buffer, S_PT_QUERY_COMPUTER &parameter)
 {
-	CStreamSP Stream;
+	CstreamSP Stream;
 	Stream->SetBuffer(buffer);
 
 	Stream->ReadWCHARs(parameter.COMPUTER_NAME, 32);
@@ -54,7 +56,7 @@ inline VOID READ_PT_QUERY_COMPUTER(BYTE *buffer, S_PT_QUERY_COMPUTER &parameter)
 
 inline VOID READ_PT_QUERY_COMPUTER_RESULT(BYTE *buffer, S_PT_QUERY_COMPUTER_RESULT &parameter)
 {
-	CStreamSP Stream;
+	CstreamSP Stream;
 	Stream->SetBuffer(buffer);
 
 	Stream->ReadWCHARs(parameter.COMPUTER_NAME, 32);
@@ -66,7 +68,7 @@ inline VOID READ_PT_QUERY_COMPUTER_RESULT(BYTE *buffer, S_PT_QUERY_COMPUTER_RESU
 
 inline VOID READ_PT_REG_PROGRAM(BYTE *buffer, S_PT_REG_PROGRAM &parameter)
 {
-	CStreamSP Stream;
+	CstreamSP Stream;
 	Stream->SetBuffer(buffer);
 
 	Stream->ReadWCHARs(parameter.PROGRAM_NAME, 32);
@@ -76,7 +78,7 @@ inline VOID READ_PT_REG_PROGRAM(BYTE *buffer, S_PT_REG_PROGRAM &parameter)
 
 inline VOID READ_PT_QUERY_PROGRAM(BYTE *buffer, S_PT_QUERY_PROGRAM &parameter)
 {
-	CStreamSP Stream;
+	CstreamSP Stream;
 	Stream->SetBuffer(buffer);
 
 	Stream->ReadWCHARs(parameter.PROGRAM_NAME, 32);
@@ -84,7 +86,7 @@ inline VOID READ_PT_QUERY_PROGRAM(BYTE *buffer, S_PT_QUERY_PROGRAM &parameter)
 
 inline VOID READ_PT_QUERY_PROGRAM_RESULT(BYTE *buffer, S_PT_QUERY_PROGRAM_RESULT &parameter)
 {
-	CStreamSP Stream;
+	CstreamSP Stream;
 	Stream->SetBuffer(buffer);
 
 	Stream->ReadWCHARs(parameter.PROGRAM_NAME, 32);

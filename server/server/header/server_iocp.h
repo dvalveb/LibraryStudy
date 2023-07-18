@@ -18,7 +18,7 @@ public:
 	// KeepAlive Thread Callback 함수
 	VOID KeepThreadCallback(VOID);
 
-protected:
+protected: 
 	// CIocp 상속 가상함수들을 재선언 합니다.
 	VOID OnIoRead(VOID* pObject, DWORD dwDataLength);
 	VOID OnIoWrote(VOID* pObject, DWORD dwDataLength);

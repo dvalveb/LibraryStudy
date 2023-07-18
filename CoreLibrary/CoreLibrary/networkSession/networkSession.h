@@ -1,7 +1,7 @@
 ﻿#pragma once
 
 
-#include "../base/study_defs.h"
+#include "../base/stdafx.h"
 #include "../multiThreadSync/multiThreadSync.h"
 #include "../circularQueue/circularQueue.h"
 #include "../criticalSection/criticalSection.h"

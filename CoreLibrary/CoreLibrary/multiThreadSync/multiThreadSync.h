@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-#include "../base/study_defs.h"
+#include "../base/stdafx.h"
 #include "../criticalSection/criticalSection.h"
 
 template <class T>

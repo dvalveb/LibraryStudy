@@ -1,8 +1,10 @@
 #pragma once
 
+#include "../Stream/Stream.h"
+
 inline DWORD WRITE_PT_REG_USER(BYTE *buffer, S_PT_REG_USER &parameter)
 {
-	CStreamSP Stream;
+	CstreamSP Stream;
 	Stream->SetBuffer(buffer);
 
 	Stream->WriteWCHARs(parameter.USER_ID, 32);
@@ -16,7 +18,7 @@ inline DWORD WRITE_PT_REG_USER(BYTE *buffer, S_PT_REG_USER &parameter)
 
 inline DWORD WRITE_PT_QUERY_USER(BYTE *buffer, S_PT_QUERY_USER &parameter)
 {
-	CStreamSP Stream;
+	CstreamSP Stream;
 	Stream->SetBuffer(buffer);
 
 	Stream->WriteWCHARs(parameter.USER_ID, 32);
@@ -26,7 +28,7 @@ inline DWORD WRITE_PT_QUERY_USER(BYTE *buffer, S_PT_QUERY_USER &parameter)
 
 inline DWORD WRITE_PT_QUERY_USER_RESULT(BYTE *buffer, S_PT_QUERY_USER_RESULT &parameter)
 {
-	CStreamSP Stream;
+	CstreamSP Stream;
 	Stream->SetBuffer(buffer);
 
 	Stream->WriteWCHARs(parameter.USER_ID, 32);
@@ -40,7 +42,7 @@ inline DWORD WRITE_PT_QUERY_USER_RESULT(BYTE *buffer, S_PT_QUERY_USER_RESULT &pa
 
 inline DWORD WRITE_PT_REG_COMPUTER(BYTE *buffer, S_PT_REG_COMPUTER &parameter)
 {
-	CStreamSP Stream;
+	CstreamSP Stream;
 	Stream->SetBuffer(buffer);
 
 	Stream->WriteWCHARs(parameter.COMPUTER_NAME, 32);
@@ -54,7 +56,7 @@ inline DWORD WRITE_PT_REG_COMPUTER(BYTE *buffer, S_PT_REG_COMPUTER &parameter)
 
 inline DWORD WRITE_PT_QUERY_COMPUTER(BYTE *buffer, S_PT_QUERY_COMPUTER &parameter)
 {
-	CStreamSP Stream;
+	CstreamSP Stream;
 	Stream->SetBuffer(buffer);
 
 	Stream->WriteWCHARs(parameter.COMPUTER_NAME, 32);
@@ -64,7 +66,7 @@ inline DWORD WRITE_PT_QUERY_COMPUTER(BYTE *buffer, S_PT_QUERY_COMPUTER &paramete
 
 inline DWORD WRITE_PT_QUERY_COMPUTER_RESULT(BYTE *buffer, S_PT_QUERY_COMPUTER_RESULT &parameter)
 {
-	CStreamSP Stream;
+	CstreamSP Stream;
 	Stream->SetBuffer(buffer);
 
 	Stream->WriteWCHARs(parameter.COMPUTER_NAME, 32);
@@ -78,7 +80,7 @@ inline DWORD WRITE_PT_QUERY_COMPUTER_RESULT(BYTE *buffer, S_PT_QUERY_COMPUTER_RE
 
 inline DWORD WRITE_PT_REG_PROGRAM(BYTE *buffer, S_PT_REG_PROGRAM &parameter)
 {
-	CStreamSP Stream;
+	CstreamSP Stream;
 	Stream->SetBuffer(buffer);
 
 	Stream->WriteWCHARs(parameter.PROGRAM_NAME, 32);
@@ -90,7 +92,7 @@ inline DWORD WRITE_PT_REG_PROGRAM(BYTE *buffer, S_PT_REG_PROGRAM &parameter)
 
 inline DWORD WRITE_PT_QUERY_PROGRAM(BYTE *buffer, S_PT_QUERY_PROGRAM &parameter)
 {
-	CStreamSP Stream;
+	CstreamSP Stream;
 	Stream->SetBuffer(buffer);
 
 	Stream->WriteWCHARs(parameter.PROGRAM_NAME, 32);
@@ -100,7 +102,7 @@ inline DWORD WRITE_PT_QUERY_PROGRAM(BYTE *buffer, S_PT_QUERY_PROGRAM &parameter)
 
 inline DWORD WRITE_PT_QUERY_PROGRAM_RESULT(BYTE *buffer, S_PT_QUERY_PROGRAM_RESULT &parameter)
 {
-	CStreamSP Stream;
+	CstreamSP Stream;
 	Stream->SetBuffer(buffer);
 
 	Stream->WriteWCHARs(parameter.PROGRAM_NAME, 32);
@@ -112,7 +114,7 @@ inline DWORD WRITE_PT_QUERY_PROGRAM_RESULT(BYTE *buffer, S_PT_QUERY_PROGRAM_RESU
 
 inline DWORD WRITE_PT_REG_USER(BYTE *buffer, WCHAR *user_id, WCHAR *user_name, DWORD age, BYTE sex, WCHAR *address)
 {
-	CStreamSP Stream;
+	CstreamSP Stream;
 	Stream->SetBuffer(buffer);
 
 	WCHAR _user_id[32] = {0,};
@@ -132,7 +134,7 @@ inline DWORD WRITE_PT_REG_USER(BYTE *buffer, WCHAR *user_id, WCHAR *user_name, D
 
 inline DWORD WRITE_PT_QUERY_USER(BYTE *buffer, WCHAR *user_id)
 {
-	CStreamSP Stream;
+	CstreamSP Stream;
 	Stream->SetBuffer(buffer);
 
 	WCHAR _user_id[32] = {0,};
@@ -144,7 +146,7 @@ inline DWORD WRITE_PT_QUERY_USER(BYTE *buffer, WCHAR *user_id)
 
 inline DWORD WRITE_PT_QUERY_USER_RESULT(BYTE *buffer, WCHAR *user_id, WCHAR *user_name, DWORD age, BYTE sex, WCHAR *address)
 {
-	CStreamSP Stream;
+	CstreamSP Stream;
 	Stream->SetBuffer(buffer);
 
 	WCHAR _user_id[32] = {0,};
@@ -164,7 +166,7 @@ inline DWORD WRITE_PT_QUERY_USER_RESULT(BYTE *buffer, WCHAR *user_id, WCHAR *use
 
 inline DWORD WRITE_PT_REG_COMPUTER(BYTE *buffer, WCHAR *computer_name, WCHAR *ip_address, BYTE cpu_type, DWORD ram, DWORD hdd)
 {
-	CStreamSP Stream;
+	CstreamSP Stream;
 	Stream->SetBuffer(buffer);
 
 	WCHAR _computer_name[32] = {0,};
@@ -182,7 +184,7 @@ inline DWORD WRITE_PT_REG_COMPUTER(BYTE *buffer, WCHAR *computer_name, WCHAR *ip
 
 inline DWORD WRITE_PT_QUERY_COMPUTER(BYTE *buffer, WCHAR *computer_name)
 {
-	CStreamSP Stream;
+	CstreamSP Stream;
 	Stream->SetBuffer(buffer);
 
 	WCHAR _computer_name[32] = {0,};
@@ -194,7 +196,7 @@ inline DWORD WRITE_PT_QUERY_COMPUTER(BYTE *buffer, WCHAR *computer_name)
 
 inline DWORD WRITE_PT_QUERY_COMPUTER_RESULT(BYTE *buffer, WCHAR *computer_name, WCHAR *ip_address, BYTE cpu_type, DWORD ram, DWORD hdd)
 {
-	CStreamSP Stream;
+	CstreamSP Stream;
 	Stream->SetBuffer(buffer);
 
 	WCHAR _computer_name[32] = {0,};
@@ -212,7 +214,7 @@ inline DWORD WRITE_PT_QUERY_COMPUTER_RESULT(BYTE *buffer, WCHAR *computer_name, 
 
 inline DWORD WRITE_PT_REG_PROGRAM(BYTE *buffer, WCHAR *program_name, DWORD cost, WCHAR *comment)
 {
-	CStreamSP Stream;
+	CstreamSP Stream;
 	Stream->SetBuffer(buffer);
 
 	WCHAR _program_name[32] = {0,};
@@ -228,7 +230,7 @@ inline DWORD WRITE_PT_REG_PROGRAM(BYTE *buffer, WCHAR *program_name, DWORD cost,
 
 inline DWORD WRITE_PT_QUERY_PROGRAM(BYTE *buffer, WCHAR *program_name)
 {
-	CStreamSP Stream;
+	CstreamSP Stream;
 	Stream->SetBuffer(buffer);
 
 	WCHAR _program_name[32] = {0,};
@@ -240,7 +242,7 @@ inline DWORD WRITE_PT_QUERY_PROGRAM(BYTE *buffer, WCHAR *program_name)
 
 inline DWORD WRITE_PT_QUERY_PROGRAM_RESULT(BYTE *buffer, WCHAR *program_name, DWORD cost, WCHAR *comment)
 {
-	CStreamSP Stream;
+	CstreamSP Stream;
 	Stream->SetBuffer(buffer);
 
 	WCHAR _program_name[32] = {0,};

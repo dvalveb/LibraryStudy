@@ -2,6 +2,7 @@
 
 #include "../header/stdafx.h"
 
+
 #define READ_PACKET(PROTOCOL)\
 	BYTE WriteBuffer[MAX_BUFFER_LENGTH] = {0, };\
 	S_##PROTOCOL Data;\

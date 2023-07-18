@@ -45,3 +45,7 @@ typedef struct _PROGRAM
 #include "connected_session_manager.h"
 #include "protocol.h"
 #include "server_iocp.h"
+
+#include "PT_WritePacket.h"
+#include "PT_Structure.h"
+#include "PT_ReadPacket.h"

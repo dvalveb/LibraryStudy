@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-#include "../base/study_defs.h"
+#include "../base/stdafx.h"
 
 #include "../eventSelect/eventSelect.h"
 #include "../packetSession/packetSession.h"

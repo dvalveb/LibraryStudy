@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-#include "../base/study_defs.h"
+#include "../base/stdafx.h"
 #include "../multiThreadSync/multiThreadSync.h"
 
 typedef struct _QUEUE_DATA
@@ -18,7 +18,7 @@ typedef struct _QUEUE_DATA
 class CCircularQueue : public CMultiThreadSync<CCircularQueue>
 {
 public:
-	CCircularQueue(VOID);
+	CCircularQueue(VOID); 
 	~CCircularQueue(VOID);
 
 private:

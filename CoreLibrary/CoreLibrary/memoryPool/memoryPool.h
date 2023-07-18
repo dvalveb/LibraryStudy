@@ -1,6 +1,6 @@
 ﻿#pragma once
 
-#include "../base/study_defs.h"
+#include "../base/stdafx.h"
 
 
 template <class T, int ALLOC_BLOCK_SIZE = 50>

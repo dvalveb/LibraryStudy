@@ -108,6 +108,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
     </ClCompile>
     <Link>
       <SubSystem>
@@ -133,7 +134,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="base\study_defs.h" />
+    <ClInclude Include="base\stdafx.h" />
     <ClInclude Include="circularQueue\circularQueue.h" />
     <ClInclude Include="clientSession\clientSession.h" />
     <ClInclude Include="criticalSection\criticalSection.h" />
@@ -147,6 +148,9 @@
     <ClInclude Include="multiThreadSync\multiThreadSync.h" />
     <ClInclude Include="networkSession\networkSession.h" />
     <ClInclude Include="packetSession\packetSession.h" />
+    <ClInclude Include="packetSession\PT_ReadPacket.h" />
+    <ClInclude Include="packetSession\PT_Structure.h" />
+    <ClInclude Include="packetSession\PT_WritePacket.h" />
     <ClInclude Include="profile\profile.h" />
     <ClInclude Include="random\random.h" />
     <ClInclude Include="registry\registry.h" />
